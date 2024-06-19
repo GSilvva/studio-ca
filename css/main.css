@@ -502,6 +502,8 @@
   }
 }
 .home__media {
+  position: relative;
+  z-index: 5;
   padding: 160px 0 0 0;
 }
 @media (max-width: 1024px) {
@@ -595,6 +597,283 @@
     height: 320px;
   }
 }
+.home__projects {
+  position: relative;
+  padding: 160px 0 0 0;
+}
+@media (max-width: 1024px) {
+  .home__projects {
+    padding: 80px 0 0 0;
+  }
+  .home__projects .container {
+    padding: 0;
+  }
+}
+.home__projects::before {
+  content: url("../assets/esq-projects.png");
+  position: absolute;
+  top: -160px;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .home__projects::before {
+    display: none;
+  }
+}
+.home__projects__content {
+  position: relative;
+  z-index: 5;
+}
+.home__projects__content .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home__projects__content .container > h2 {
+  position: relative;
+  margin: 0 0 64px 0;
+}
+.home__projects__content .container > h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: #CD9135;
+  z-index: 1;
+  height: 24px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1024px) {
+  .home__projects__content .container > h2::before {
+    height: 12px;
+  }
+}
+.home__projects__content .container > h2 span {
+  font: 700 80px/1 "Bogart Trial", sans-serif;
+  position: relative;
+  z-index: 5;
+}
+@media (max-width: 1024px) {
+  .home__projects__content .container > h2 span {
+    font-size: 40px;
+  }
+}
+.home__projects__content .container > button {
+  width: 100%;
+  position: relative;
+  height: 480px;
+  padding: 48px;
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 1024px) {
+  .home__projects__content .container > button {
+    padding: 0 24px 32px 24px;
+    height: 280px;
+  }
+}
+.home__projects__content .container > button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 5;
+}
+.home__projects__content .container > button > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+.home__projects__content .container > button article {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 24px;
+}
+@media (max-width: 1024px) {
+  .home__projects__content .container > button article {
+    gap: 16px;
+  }
+  .home__projects__content .container > button article img {
+    width: 40px;
+  }
+}
+.home__projects__content .container > button article div h6 {
+  font: 700 32px/1 "Bogart Trial", sans-serif;
+  color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .home__projects__content .container > button article div h6 {
+    font-size: 24px;
+  }
+}
+.home__projects__content .container > button article div h2 {
+  text-transform: uppercase;
+  font: 300 18px/1 "Montserrat", sans-serif;
+  letter-spacing: 3.2px;
+  color: #FFFFFF;
+  margin: 12px 0 0 0;
+}
+@media (max-width: 1024px) {
+  .home__projects__content .container > button article div h2 {
+    font-size: 14px;
+    margin: 8px 0 0 0;
+  }
+}
+.home__projects__content .container > div {
+  width: 100%;
+  margin: 16px 0 0 0;
+  display: flex;
+  gap: 16px;
+  height: 120px;
+}
+@media (max-width: 1024px) {
+  .home__projects__content .container > div {
+    height: 96px;
+    gap: 0;
+    margin: 0;
+  }
+}
+.home__projects__content .container > div button {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+.home__projects__content .container > div button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home__projects__content .container > div span {
+  flex: 1;
+  background: #BD5D26;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFFFF;
+  font: 400 40px/1 "Montserrat", sans-serif;
+}
+@media (max-width: 1024px) {
+  .home__projects__content .container > div span {
+    font-size: 32px;
+  }
+}
+.home__projects__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(77, 81, 46, 0.8);
+  opacity: 0;
+  visibility: hidden;
+}
+.home__projects__modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+.home__projects__modal [data-close] {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+@media (max-width: 1024px) {
+  .home__projects__modal [data-close] {
+    top: 16px;
+    right: 16px;
+    width: 24px;
+  }
+}
+.home__projects__modal [data-prev],
+.home__projects__modal [data-next] {
+  position: absolute;
+  top: 44%;
+  transform: translateY(-50%);
+}
+.home__projects__modal [data-prev] {
+  left: 32px;
+}
+@media (max-width: 1024px) {
+  .home__projects__modal [data-prev] {
+    left: 16px;
+  }
+}
+.home__projects__modal [data-next] {
+  right: 32px;
+}
+@media (max-width: 1024px) {
+  .home__projects__modal [data-next] {
+    right: 16px;
+  }
+}
+.home__projects__modal .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.home__projects__modal .container figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  background: #424527;
+}
+.home__projects__modal .container figure img {
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home__projects__modal .container div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+@media (max-width: 1024px) {
+  .home__projects__modal .container div {
+    padding: 24px;
+  }
+}
+.home__projects__modal .container div h6 {
+  font: 700 20px/110% "Montserrat", sans-serif;
+  padding: 0 0 16px 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.32);
+  color: #FFFFFF;
+}
+@media (max-width: 1024px) {
+  .home__projects__modal .container div h6 {
+    font-size: 16px;
+    padding: 0 0 12px 0;
+  }
+}
+.home__projects__modal .container div p {
+  color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 1024px) {
+  .home__projects__modal .container div p, .home__projects__modal .container div p * {
+    font-size: 16px;
+  }
+}
+.home__projects__modal .container div p strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
 * {
   list-style: none;
   text-decoration: none;
@@ -679,7 +958,7 @@ small {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 99;
   height: 72px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.24);
 }
