@@ -96,10 +96,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 5;
 }
-.home__banners .swiper-slide > img {
+.home__banners .swiper-slide img {
   position: absolute;
   top: 0;
   left: 0;
@@ -108,46 +108,6 @@
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
-}
-.home__banners .swiper-slide .container {
-  position: relative;
-  z-index: 9;
-}
-.home__banners .swiper-slide .container button {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  gap: 40px;
-}
-@media (max-width: 1024px) {
-  .home__banners .swiper-slide .container button {
-    gap: 16px;
-  }
-  .home__banners .swiper-slide .container button img {
-    width: 40px;
-  }
-}
-.home__banners .swiper-slide .container button div h6 {
-  text-transform: uppercase;
-  font: 300 18px/1 "Montserrat", sans-serif;
-  letter-spacing: 3.2px;
-  color: #FFFFFF;
-  margin: 0 0 16px 0;
-}
-@media (max-width: 1024px) {
-  .home__banners .swiper-slide .container button div h6 {
-    font-size: 12px;
-    margin: 0 0 8px 0;
-  }
-}
-.home__banners .swiper-slide .container button div h2 {
-  font: 700 48px/1 "Bogart Trial", sans-serif;
-  color: #FFFFFF;
-}
-@media (max-width: 1024px) {
-  .home__banners .swiper-slide .container button div h2 {
-    font-size: 28px;
-  }
 }
 .home__banners .swiper-pagination {
   position: absolute;
@@ -257,12 +217,6 @@
     gap: 40px;
     margin: 0 0 64px 0;
   }
-}
-.home__about__title h6 {
-  text-transform: uppercase;
-  font: 300 18px/1 "Montserrat", sans-serif;
-  letter-spacing: 3px;
-  color: #BD5D26;
 }
 .home__about__title h2 {
   padding: 0 0 0 80px;
@@ -673,17 +627,7 @@
     height: 280px;
   }
 }
-.home__projects__content .container > button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 100%);
-  z-index: 5;
-}
-.home__projects__content .container > button > img {
+.home__projects__content .container > button img {
   position: absolute;
   top: 0;
   left: 0;
@@ -692,44 +636,6 @@
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
-}
-.home__projects__content .container > button article {
-  position: relative;
-  z-index: 9;
-  display: flex;
-  align-items: center;
-  text-align: left;
-  gap: 24px;
-}
-@media (max-width: 1024px) {
-  .home__projects__content .container > button article {
-    gap: 16px;
-  }
-  .home__projects__content .container > button article img {
-    width: 40px;
-  }
-}
-.home__projects__content .container > button article div h6 {
-  font: 700 32px/1 "Bogart Trial", sans-serif;
-  color: #FFFFFF;
-}
-@media (max-width: 1024px) {
-  .home__projects__content .container > button article div h6 {
-    font-size: 24px;
-  }
-}
-.home__projects__content .container > button article div h2 {
-  text-transform: uppercase;
-  font: 300 18px/1 "Montserrat", sans-serif;
-  letter-spacing: 3.2px;
-  color: #FFFFFF;
-  margin: 12px 0 0 0;
-}
-@media (max-width: 1024px) {
-  .home__projects__content .container > button article div h2 {
-    font-size: 14px;
-    margin: 8px 0 0 0;
-  }
 }
 .home__projects__content .container > div {
   width: 100%;
